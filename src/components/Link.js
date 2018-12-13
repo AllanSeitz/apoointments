@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Link = ({ active, children, onClick }) => {
-  if (activce) {
+  if (active) {
     return <span>{children}</span>;
   }
   return (
