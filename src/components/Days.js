@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 
 const Todo = ({ onClick, completed, text }) => (
   <span
@@ -13,9 +13,9 @@ const Todo = ({ onClick, completed, text }) => (
 );
 
 Todo.propTypes = {
-  onClick: PropTypes.func.isRequired,
-  completed: PropTypes.bool.isRequired,
-  text: PropTypes.string.isRequired
+  onClick: propTypes.func.isRequired,
+  completed: propTypes.bool.isRequired,
+  text: propTypes.string.isRequired
 };
 
 export default Todo;

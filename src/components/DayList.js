@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 import Days from "./Days";
 
 const DayList = ({ days, onTodoClick }) => (
@@ -11,14 +11,14 @@ const DayList = ({ days, onTodoClick }) => (
 );
 
 DayList.propTypes = {
-  days: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      completed: PropTypes.bool.isRequired,
-      text: PropTypes.string.isRequired
+  days: propTypes.arrayOf(
+    propTypes.shape({
+      // id: propTypes.number.isRequired,
+      completed: propTypes.bool.isRequired,
+      text: propTypes.string.isRequired
     }).isRequired
-  ).isRequired,
-  onTodoClick: PropTypes.func.isRequired
+  ).isRequired
+  // onTodoClick: propTypes.func.isRequired
 };
 
 export default DayList;

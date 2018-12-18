@@ -1,15 +1,15 @@
-import React from "react";
-import { connect } from "react-redux";
-import { addDay } from "../actions";
-import { addLocation } from "../actions";
-// import { addTime } from "../actions";
+// import React from "react";
+// import { connect } from "react-redux";
+// import { addDay } from "../actions";
+// import { addLocation } from "../actions";
+// // import { addTime } from "../actions";
 
-let AddEvent = ({ dispatch }) => {
-  let input;
+// let AddEvent = ({ dispatch }) => {
+//   let input;
 
-  return <div />;
-};
+//   return <div />;
+// };
 
-AddEvent = connect()(AddEvent);
+// AddEvent = connect()(AddEvent);
 
-export default AddEvent;
+// export default AddEvent;

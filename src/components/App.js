@@ -6,7 +6,6 @@ import AddLocation from "../containers/AddLocation";
 import VisibleTodoList from "../containers/VisibleTodoList";
 import VisibleTimeList from "../containers/VisibleTimeList";
 import VisibleLocationList from "../containers/VisibleLocationList";
-import AddEvent from "../containers/AddEvent";
 
 const App = () => (
   <div className="container">
@@ -64,7 +63,6 @@ const App = () => (
     </div>
     <div />
     <h1>Events</h1>
-    <AddEvent />
     <h3>
       Week day = <VisibleTodoList />
     </h3>

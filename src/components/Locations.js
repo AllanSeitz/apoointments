@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 
 const Locations = ({ onClick, completed, text }) => (
   <span
@@ -12,10 +12,10 @@ const Locations = ({ onClick, completed, text }) => (
   </span>
 );
 
-Locations.PropTypes = {
-  onClick: PropTypes.func.isRequired,
-  completed: PropTypes.bool.isRequired,
-  text: PropTypes.string.isRequired
+Locations.propTypes = {
+  onClick: propTypes.func.isRequired,
+  completed: propTypes.bool.isRequired,
+  text: propTypes.string.isRequired
 };
 
 export default Locations;

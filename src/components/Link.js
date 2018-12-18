@@ -1,11 +1,12 @@
 import React from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 
 const Link = ({ active, children, onClick }) => {
   if (active) {
     return <span>{children}</span>;
   }
   return (
+    // eslint-disable-next-line jsx-a11y/anchor-is-valid
     <a
       href=""
       onClick={e => {
@@ -18,10 +19,10 @@ const Link = ({ active, children, onClick }) => {
   );
 };
 
-Link.PropTypes = {
-  active: PropTypes.bool.isRequired,
-  children: PropTypes.node.isRequired,
-  onCLick: PropTypes.func.isRequired
+Link.propTypes = {
+  active: propTypes.bool.isRequired,
+  children: propTypes.node.isRequired
+  // onCLick: propTypes.func.isRequired
 };
 
 export default Link;
