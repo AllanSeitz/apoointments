@@ -8,14 +8,14 @@ let AddDay = ({ dispatch }) => {
   return (
     <div>
       <form
-      // onSubmit={e => {
-      //   e.preventDefault();
-      //   if (!input.value.trim()) {
-      //     return;
-      //   }
-      //   dispatch(addDay(input.value));
-      //   input.value = "";
-      // }}
+        onSubmit={e => {
+          e.preventDefault();
+          if (!input.value.trim()) {
+            return;
+          }
+          dispatch(addDay(input.value));
+          input.value = "";
+        }}
       >
         <input
           type="date"

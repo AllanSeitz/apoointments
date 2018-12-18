@@ -3,15 +3,20 @@ import propTypes from "prop-types";
 import Locations from "./Locations";
 
 const LocationsList = ({ locations, onLocationsClick }) => (
-  <span>
-    {locations.map((location, index) => (
-      <Locations
-        key={index}
-        {...location}
-        onClick={() => onLocationsClick(index)}
-      />
-    ))}
-  </span>
+  <ul className="list-group">
+    <li className="list-group-item list-group-item-info">
+      Location:{" "}
+      {locations.map((location, index) => (
+        <li>
+          <Locations
+            key={index}
+            {...location}
+            onClick={() => onLocationsClick(index)}
+          />
+        </li>
+      ))}
+    </li>
+  </ul>
 );
 
 LocationsList.propTypes = {

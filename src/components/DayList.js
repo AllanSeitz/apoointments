@@ -3,11 +3,17 @@ import propTypes from "prop-types";
 import Days from "./Days";
 
 const DayList = ({ days, onTodoClick }) => (
-  <span>
-    {days.map((day, index) => (
-      <Days key={index} {...day} onClick={() => onTodoClick(index)} />
-    ))}
-  </span>
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-success">
+      Week Day:{" "}
+      {days.map((day, index) => (
+        <li>
+          {" "}
+          <Days key={index} {...day} onClick={() => onTodoClick(index)} />{" "}
+        </li>
+      ))}
+    </li>
+  </ul>
 );
 
 DayList.propTypes = {

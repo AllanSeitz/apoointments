@@ -12,19 +12,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-ul {
-  list-style: none;
-  font-size: 1.3em;
-}
-
-li {
-  font-style: italic;
-}
-button {
-  margin-bottom: 1em;
-}
-
-input {
-  margin-top: 0.5em;
-}

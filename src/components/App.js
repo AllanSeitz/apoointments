@@ -1,5 +1,6 @@
 import React from "react";
 import Footer from "./Footer";
+import AddEvent from "../containers/AddEvent";
 import AddDay from "../containers/AddDay";
 import AddTime from "../containers/AddTime";
 import AddLocation from "../containers/AddLocation";
@@ -9,73 +10,100 @@ import VisibleLocationList from "../containers/VisibleLocationList";
 
 const App = () => (
   <div className="container">
-    <h2>Agenda</h2>
-    <p className="lead">
-      This agenda viewer will let you see multiple events cleanly!
-    </p>
-    <div className="agenda">
-      <div className="table-responsive">
-        <table className="table table-condensed table-bordered">
-          <thead>
-            <tr>
-              <th>
-                <strong>Date</strong>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="agenda-date info" rowSpan="1">
-                <AddDay />
-              </td>
-            </tr>
-          </tbody>
-          <thead>
-            <tr>
-              <th>
-                <strong>Time</strong>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="agenda-date success" rowSpan="1">
-                <AddTime />
-              </td>
-            </tr>
-          </tbody>
-          <thead>
-            <tr>
-              <th>
-                <strong>Location</strong>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="agenda-date danger" rowSpan="1">
-                <AddLocation />
-              </td>
-            </tr>
-          </tbody>
-        </table>
+    <div className="Main">
+      <div className="jumbotron">
+        <h3>Trifin Labs Agenda</h3>
+        <p>Select Date/ Time/ Location</p>
       </div>
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Date</h3>
+        </div>
+        <div class="panel-body">
+          <AddDay />
+        </div>
+      </div>
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Time</h3>
+        </div>
+        <div class="panel-body">
+          <AddTime />
+        </div>
+      </div>
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h4 class="panel-title">Location</h4>
+        </div>
+        <div class="panel-body">
+          <AddLocation />
+        </div>
+      </div>
+      <AddEvent />
     </div>
-    <div />
-    <h1>Events</h1>
-    <h3>
-      Week day = <VisibleTodoList />
-    </h3>
+    {/* <table>
+      <thead>
+        <tr>
+          <th>
+            <strong>Date</strong>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <AddDay />
+          </td>
+        </tr>
+      </tbody>
+      <thead>
+        <tr>
+          <th>
+            <strong>Time</strong>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <AddTime />
+          </td>
+        </tr>
+      </tbody>
+      <thead>
+        <tr>
+          <th>
+            <strong>Location</strong>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <AddLocation />
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
-    <h3>
-      Time of Day = <VisibleTimeList />
-    </h3>
-    <h3>
-      Set Location = <VisibleLocationList />
-    </h3>
-    <h3>
-      <Footer />
-    </h3>
+    <div /> */}
+    <h1>Events</h1>
+    <ul>
+      <li>
+        <VisibleTodoList />
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <VisibleTimeList />
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <VisibleLocationList />
+      </li>
+    </ul>
+    <Footer />
   </div>
 );
 
