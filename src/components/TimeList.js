@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 import Times from "./Times";
 
 const TimeList = ({ times, onTimesClick }) => (
-  <ul>
+  <span>
     {times.map((time, index) => (
       <Times key={index} {...time} onClick={() => onTimesClick(index)} />
     ))}
-  </ul>
+  </span>
 );
 
 TimeList.propTypes = {

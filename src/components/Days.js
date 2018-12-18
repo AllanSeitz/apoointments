@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Times = ({ onClick, completed, text }) => (
+const Todo = ({ onClick, completed, text }) => (
   <span
     onClick={onClick}
     style={{
@@ -12,10 +12,10 @@ const Times = ({ onClick, completed, text }) => (
   </span>
 );
 
-Times.PropTypes = {
+Todo.propTypes = {
   onClick: PropTypes.func.isRequired,
   completed: PropTypes.bool.isRequired,
   text: PropTypes.string.isRequired
 };
 
-export default Times;
+export default Todo;

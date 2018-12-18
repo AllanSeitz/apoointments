@@ -1,22 +1,22 @@
 import { connect } from "react-redux";
 import { toggleTodo } from "../actions";
-import TodoList from "../components/TodoList";
+import DayList from "../components/DayList";
 
-const getVisibleTodos = (todos, filter) => {
+const getVisibleDays = (days, filter) => {
   switch (filter) {
     case "SHOW_COMPLETED":
-      return todos.filter(t => t.completed);
+      return days.filter(t => t.completed);
     case "SHOW_ACTIVE":
-      return todos.filter(t => !t.completed);
+      return days.filter(t => !t.completed);
     case "SHOW_ALL":
     default:
-      return todos;
+      return days;
   }
 };
 
 const mapStateToProps = state => {
   return {
-    todos: getVisibleTodos(state.todos, state.visibilityFilter)
+    days: getVisibleDays(state.days, state.visibilityFilter)
   };
 };
 
@@ -31,6 +31,6 @@ const mapDispatchToProps = dispatch => {
 const VisibleTodoList = connect(
   mapStateToProps,
   mapDispatchToProps
-)(TodoList);
+)(DayList);
 
 export default VisibleTodoList;

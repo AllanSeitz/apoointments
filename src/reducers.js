@@ -4,12 +4,13 @@ import {
   ADD_DAY,
   TOGGLE_TODO,
   SET_VISIBILITY_FILTER,
-  VisibilityFilters
+  VisibilityFilters,
+  ADD_LOCATION
 } from "./actions";
 
-const { SHOW_ALL } = VisibilityFilters;
+const { SHOW_ACTIVE } = VisibilityFilters;
 
-function visibilityFilter(state = SHOW_ALL, action) {
+function visibilityFilter(state = SHOW_ACTIVE, action) {
   switch (action.type) {
     case SET_VISIBILITY_FILTER:
       return action.filter;
@@ -18,7 +19,7 @@ function visibilityFilter(state = SHOW_ALL, action) {
   }
 }
 
-function todos(state = [], action) {
+function days(state = [], action) {
   switch (action.type) {
     case ADD_DAY:
       return [
@@ -29,13 +30,13 @@ function todos(state = [], action) {
         }
       ];
     case TOGGLE_TODO:
-      return state.map((todo, index) => {
+      return state.map((day, index) => {
         if (index === action.index) {
-          return Object.assign({}, todo, {
-            completed: !todo.completed
+          return Object.assign({}, day, {
+            completed: !day.completed
           });
         }
-        return todo;
+        return day;
       });
     default:
       return state;
@@ -66,10 +67,35 @@ function times(state = [], action) {
   }
 }
 
+function locations(state = [], action) {
+  switch (action.type) {
+    case ADD_LOCATION:
+      return [
+        ...state,
+        {
+          text: action.text,
+          completed: false
+        }
+      ];
+    case TOGGLE_TODO:
+      return state.map((location, index) => {
+        if (index === action.index) {
+          return Object.assign({}, location, {
+            completed: !location.completed
+          });
+        }
+        return location;
+      });
+    default:
+      return state;
+  }
+}
+
 const todoApp = combineReducers({
   visibilityFilter,
-  todos,
-  times
+  days,
+  times,
+  locations
 });
 
 export default todoApp;

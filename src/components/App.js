@@ -2,9 +2,11 @@ import React from "react";
 import Footer from "./Footer";
 import AddDay from "../containers/AddDay";
 import AddTime from "../containers/AddTime";
+import AddLocation from "../containers/AddLocation";
 import VisibleTodoList from "../containers/VisibleTodoList";
 import VisibleTimeList from "../containers/VisibleTimeList";
-// import Location from "./Location";
+import VisibleLocationList from "../containers/VisibleLocationList";
+import AddEvent from "../containers/AddEvent";
 
 const App = () => (
   <div className="container">
@@ -12,7 +14,6 @@ const App = () => (
     <p className="lead">
       This agenda viewer will let you see multiple events cleanly!
     </p>
-
     <div className="agenda">
       <div className="table-responsive">
         <table className="table table-condensed table-bordered">
@@ -44,30 +45,39 @@ const App = () => (
               </td>
             </tr>
           </tbody>
+          <thead>
+            <tr>
+              <th>
+                <strong>Location</strong>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="agenda-date danger" rowSpan="1">
+                <AddLocation />
+              </td>
+            </tr>
+          </tbody>
         </table>
       </div>
     </div>
     <div />
     <h1>Events</h1>
-    <table>
-      <tbody>
-        <tr>
-          <p>Week day = </p>
+    <AddEvent />
+    <h3>
+      Week day = <VisibleTodoList />
+    </h3>
 
-          <td>
-            <VisibleTodoList />
-          </td>
-        </tr>
-        <tr>
-          <p>time of day = </p>
-          <td>
-            <VisibleTimeList />
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    {/* <Location /> */}
-    <Footer />
+    <h3>
+      Time of Day = <VisibleTimeList />
+    </h3>
+    <h3>
+      Set Location = <VisibleLocationList />
+    </h3>
+    <h3>
+      <Footer />
+    </h3>
   </div>
 );
 
