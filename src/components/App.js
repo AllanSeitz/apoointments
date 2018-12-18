@@ -1,150 +1,72 @@
 import React from "react";
 import Footer from "./Footer";
-import AddTodo from "../containers/AddTodo";
+import AddDay from "../containers/AddDay";
+import AddTime from "../containers/AddTime";
 import VisibleTodoList from "../containers/VisibleTodoList";
+import VisibleTimeList from "../containers/VisibleTimeList";
+// import Location from "./Location";
 
 const App = () => (
-  <div class="container">
+  <div className="container">
     <h2>Agenda</h2>
-    <p class="lead">
+    <p className="lead">
       This agenda viewer will let you see multiple events cleanly!
     </p>
 
-    <div class="agenda">
-      <div class="table-responsive">
-        <table class="table table-condensed table-bordered">
+    <div className="agenda">
+      <div className="table-responsive">
+        <table className="table table-condensed table-bordered">
           <thead>
             <tr>
-              <th>Date</th>
-              <th>Time</th>
-              <th>Event</th>
+              <th>
+                <strong>Date</strong>
+              </th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td class="agenda-date" class="danger" rowspan="1">
-                <div class="dayofweek">
-                  Monday
-                  <AddTodo />
-                </div>
-              </td>
-              <td class="agenda-time">5:30 AM</td>
-              <td class="agenda-events">
-                <div class="agenda-event">
-                  <i
-                    class="glyphicon glyphicon-repeat text-muted"
-                    title="Repeating event"
-                  />
-                  <VisibleTodoList />
-                </div>
+              <td className="agenda-date info" rowSpan="1">
+                <AddDay />
               </td>
             </tr>
+          </tbody>
+          <thead>
             <tr>
-              <td class="agenda-date" class="primary" rowspan="1">
-                <div class="dayofweek">
-                  Tuesday
-                  <AddTodo />
-                </div>
-              </td>
-              <td class="agenda-time">5:30 AM</td>
-              <td class="agenda-events">
-                <div class="agenda-event">
-                  <i
-                    class="glyphicon glyphicon-repeat text-muted"
-                    title="Repeating event"
-                  />
-                    <VisibleTodoList />
-                </div>
-              </td>
+              <th>
+                <strong>Time</strong>
+              </th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
-              <td class="agenda-date" class="danger" rowspan="1">
-                <div class="dayofweek">
-                  Wenedsday <AddTodo />
-                </div>
-              </td>
-              <td class="agenda-time">5:30 AM</td>
-              <td class="agenda-events">
-                <div class="agenda-event">
-                  <i
-                    class="glyphicon glyphicon-repeat text-muted"
-                    title="Repeating event"
-                  />
-                    Fishing
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="agenda-date" class="primary" rowspan="1">
-                <div class="dayofweek">
-                  Thursday
-                  <AddTodo />
-                </div>
-              </td>
-              <td class="agenda-time">5:30 AM</td>
-              <td class="agenda-events">
-                <div class="agenda-event">
-                  <i
-                    class="glyphicon glyphicon-repeat text-muted"
-                    title="Repeating event"
-                  />
-                    Fishing
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="agenda-date" class="primary" rowspan="1">
-                <div class="dayofweek">Friday</div>
-              </td>
-              <td class="agenda-time">5:30 AM</td>
-              <td class="agenda-events">
-                <div class="agenda-event">
-                  <i
-                    class="glyphicon glyphicon-repeat text-muted"
-                    title="Repeating event"
-                  />
-                    Fishing
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="agenda-date" class="active" rowspan="1">
-                <div class="dayofweek">Saturday</div>
-              </td>
-              <td class="agenda-time">5:30 AM</td>
-              <td class="agenda-events">
-                <div class="agenda-event">
-                  <i
-                    class="glyphicon glyphicon-repeat text-muted"
-                    title="Repeating event"
-                  />
-                    Fishing
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="agenda-date" class="active" rowspan="1">
-                <div class="dayofweek">Sunday</div>
-              </td>
-              <td class="agenda-time">5:30 AM</td>
-              <td class="agenda-events">
-                <div class="agenda-event">
-                  <i
-                    class="glyphicon glyphicon-repeat text-muted"
-                    title="Repeating event"
-                  />
-                   
-                </div>
+              <td className="agenda-date success" rowSpan="1">
+                <AddTime />
               </td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
-    <AddTodo />
-    {","}
-    <AddTodo />
-    <VisibleTodoList />
+    <div />
+    <h1>Events</h1>
+    <table>
+      <tbody>
+        <tr>
+          <p>Week day = </p>
+
+          <td>
+            <VisibleTodoList />
+          </td>
+        </tr>
+        <tr>
+          <p>time of day = </p>
+          <td>
+            <VisibleTimeList />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    {/* <Location /> */}
     <Footer />
   </div>
 );

@@ -1,17 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Todo from "./Todo";
+import Times from "./Times";
 
-const TodoList = ({ todos, onTodoClick }) => (
+const TimeList = ({ times, onTimesClick }) => (
   <ul>
-    {todos.map((todo, index) => (
-      <Todo key={index} {...todo} onClick={() => onTodoClick(index)} />
+    {times.map((time, index) => (
+      <Times key={index} {...time} onClick={() => onTimesClick(index)} />
     ))}
   </ul>
 );
 
-TodoList.propTypes = {
-  todos: PropTypes.arrayOf(
+TimeList.propTypes = {
+  times: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       completed: PropTypes.bool.isRequired,
@@ -21,4 +21,4 @@ TodoList.propTypes = {
   onTodoClick: PropTypes.func.isRequired
 };
 
-export default TodoList;
+export default TimeList;
