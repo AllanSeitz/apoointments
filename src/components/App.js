@@ -37,9 +37,8 @@ const App = () => (
           <AddLocation />
         </div>
       </div>
-      <AddEvent />
     </div>
-    <h1>Events</h1>
+    <h3>Appointments:</h3>
     <ul>
       <li>
         <VisibleTodoList />
