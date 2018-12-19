@@ -19,7 +19,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  onTodoClick: id => {
+  onDayClick: id => {
     dispatch(toggleTodo(id));
   }
 });

@@ -1,7 +1,7 @@
 import React from "react";
 import propTypes from "prop-types";
 
-const Todo = ({ onClick, completed, text }) => (
+const Days = ({ onClick, completed, text }) => (
   <span
     onClick={onClick}
     style={{
@@ -12,10 +12,10 @@ const Todo = ({ onClick, completed, text }) => (
   </span>
 );
 
-Todo.propTypes = {
+Days.propTypes = {
   onClick: propTypes.func.isRequired,
   completed: propTypes.bool.isRequired,
   text: propTypes.string.isRequired
 };
 
-export default Todo;
+export default Days;

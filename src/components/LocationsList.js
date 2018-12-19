@@ -1,5 +1,5 @@
 import React from "react";
-import propTypes from "prop-types";
+import PropTypes from "prop-types";
 import Locations from "./Locations";
 
 const LocationsList = ({ locations, onLocationsClick }) => (
@@ -19,15 +19,15 @@ const LocationsList = ({ locations, onLocationsClick }) => (
   </ul>
 );
 
-LocationsList.propTypes = {
-  locations: propTypes.arrayOf(
-    propTypes.shape({
-      // id: propTypes.number.isRequired,
-      completed: propTypes.bool.isRequired,
-      text: propTypes.string.isRequired
+LocationsList.PropTypes = {
+  locations: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      completed: PropTypes.bool.isRequired,
+      text: PropTypes.string.isRequired
     }).isRequired
-  ).isRequired
-  // onTodoClick: propTypes.func.isRequired
+  ).isRequired,
+  onLocationClick: PropTypes.func.isRequired
 };
 
 export default LocationsList;

@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "./Footer";
+import NavBar from "./NavBar";
 import AddEvent from "../containers/AddEvent";
 import AddDay from "../containers/AddDay";
 import AddTime from "../containers/AddTime";
@@ -41,52 +41,6 @@ const App = () => (
       </div>
       <AddEvent />
     </div>
-    {/* <table>
-      <thead>
-        <tr>
-          <th>
-            <strong>Date</strong>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <AddDay />
-          </td>
-        </tr>
-      </tbody>
-      <thead>
-        <tr>
-          <th>
-            <strong>Time</strong>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <AddTime />
-          </td>
-        </tr>
-      </tbody>
-      <thead>
-        <tr>
-          <th>
-            <strong>Location</strong>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <AddLocation />
-          </td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div /> */}
     <h1>Events</h1>
     <ul>
       <li>
@@ -103,7 +57,7 @@ const App = () => (
         <VisibleLocationList />
       </li>
     </ul>
-    <Footer />
+    <NavBar />
   </div>
 );
 

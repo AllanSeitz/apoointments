@@ -1,5 +1,5 @@
 import React from "react";
-import propTypess from "prop-types";
+import propTypes from "prop-types";
 
 const Times = ({ onClick, completed, text }) => (
   <span
@@ -12,10 +12,10 @@ const Times = ({ onClick, completed, text }) => (
   </span>
 );
 
-Times.propTypess = {
-  onClick: propTypess.func.isRequired,
-  completed: propTypess.bool.isRequired,
-  text: propTypess.string.isRequired
+Times.propTypes = {
+  onClick: propTypes.func.isRequired,
+  completed: propTypes.bool.isRequired,
+  text: propTypes.string.isRequired
 };
 
 export default Times;

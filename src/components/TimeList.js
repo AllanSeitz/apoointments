@@ -1,5 +1,5 @@
 import React from "react";
-import propTypes from "prop-types";
+import PropTypes from "prop-types";
 import Times from "./Times";
 
 const TimeList = ({ times, onTimesClick }) => (
@@ -15,15 +15,15 @@ const TimeList = ({ times, onTimesClick }) => (
   </ul>
 );
 
-TimeList.propTypes = {
-  times: propTypes.arrayOf(
-    propTypes.shape({
-      // id: propTypes.number.isRequired,
-      completed: propTypes.bool.isRequired,
-      text: propTypes.string.isRequired
+TimeList.PropTypes = {
+  times: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      completed: PropTypes.bool.isRequired,
+      text: PropTypes.string.isRequired
     }).isRequired
-  ).isRequired
-  // onTodoClick: propTypes.func.isRequired
+  ).isRequired,
+  onTimesClick: PropTypes.func.isRequired
 };
 
 export default TimeList;

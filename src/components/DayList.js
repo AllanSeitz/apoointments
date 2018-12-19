@@ -1,30 +1,30 @@
 import React from "react";
-import propTypes from "prop-types";
+import PropTypes from "prop-types";
 import Days from "./Days";
 
-const DayList = ({ days, onTodoClick }) => (
+const DayList = ({ days, onDayClick }) => (
   <ul class="list-group">
     <li class="list-group-item list-group-item-success">
       Week Day:{" "}
       {days.map((day, index) => (
         <li>
           {" "}
-          <Days key={index} {...day} onClick={() => onTodoClick(index)} />{" "}
+          <Days key={index} {...day} onClick={() => onDayClick(index)} />{" "}
         </li>
       ))}
     </li>
   </ul>
 );
 
-DayList.propTypes = {
-  days: propTypes.arrayOf(
-    propTypes.shape({
-      // id: propTypes.number.isRequired,
-      completed: propTypes.bool.isRequired,
-      text: propTypes.string.isRequired
+DayList.PropTypes = {
+  days: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      completed: PropTypes.bool.isRequired,
+      text: PropTypes.string.isRequired
     }).isRequired
-  ).isRequired
-  // onTodoClick: propTypes.func.isRequired
+  ).isRequired,
+  onDayClick: PropTypes.func.isRequired
 };
 
 export default DayList;
