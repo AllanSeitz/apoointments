@@ -8,9 +8,9 @@ import {
   ADD_LOCATION
 } from "./actions";
 
-const { SHOW_ACTIVE } = VisibilityFilters;
+const { SHOW_ALL } = VisibilityFilters;
 
-function visibilityFilter(state = SHOW_ACTIVE, action) {
+function visibilityFilter(state = SHOW_ALL, action) {
   switch (action.type) {
     case SET_VISIBILITY_FILTER:
       return action.filter;
