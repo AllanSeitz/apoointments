@@ -49,6 +49,4 @@ let AddDay = ({ dispatch }) => {
   );
 };
 
-AddDay = connect()(AddDay);
-
-export default AddDay;
+export default connect()(AddDay);

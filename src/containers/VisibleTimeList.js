@@ -14,23 +14,17 @@ const getVisibleTimes = (times, filter) => {
   }
 };
 
-const mapStateToProps = state => {
-  return {
-    times: getVisibleTimes(state.times, state.visibilityFilter)
-  };
-};
+const mapStateToProps = state => ({
+  times: getVisibleTimes(state.times, state.visibilityFilter)
+});
 
-const mapDispatchToProps = dispatch => {
-  return {
-    onTimesClick: id => {
-      dispatch(toggleTodo(id));
-    }
-  };
-};
+const mapDispatchToProps = dispatch => ({
+  onTimesClick: id => {
+    dispatch(toggleTodo(id));
+  }
+});
 
-const VisibleTimeList = connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(TimeList);
-
-export default VisibleTimeList;

@@ -14,23 +14,17 @@ const getVisibleLocations = (locations, filter) => {
   }
 };
 
-const mapStateToProps = state => {
-  return {
-    locations: getVisibleLocations(state.locations, state.visibilityFilter)
-  };
-};
+const mapStateToProps = state => ({
+  locations: getVisibleLocations(state.locations, state.visibilityFilter)
+});
 
-const mapDispatchToProps = dispatch => {
-  return {
-    onLocationsClick: id => {
-      dispatch(toggleTodo(id));
-    }
-  };
-};
+const mapDispatchToProps = dispatch => ({
+  onLocationsClick: id => {
+    dispatch(toggleTodo(id));
+  }
+});
 
-const VisibleLocationsList = connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(LocationsList);
-
-export default VisibleLocationsList;

@@ -24,7 +24,7 @@ let AddLocation = ({ dispatch }) => {
           }}
         />
       </form>
-      {/* <button
+      <button
         onClick={e => {
           e.preventDefault();
           if (!input.value.trim()) {
@@ -35,11 +35,9 @@ let AddLocation = ({ dispatch }) => {
         }}
       >
         Add Location
-      </button> */}
+      </button>
     </div>
   );
 };
 
-AddLocation = connect()(AddLocation);
-
-export default AddLocation;
+export default connect()(AddLocation);

@@ -55,6 +55,4 @@ let AddTime = ({ dispatch }) => {
   );
 };
 
-AddTime = connect()(AddTime);
-
-export default AddTime;
+export default connect()(AddTime);

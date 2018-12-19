@@ -46,6 +46,5 @@ let AddEvent = ({ dispatch }) => {
     </div>
   );
 };
-AddEvent = connect()(AddEvent);
 
-export default AddEvent;
+export default connect()(AddEvent);

@@ -14,23 +14,17 @@ const getVisibleDays = (days, filter) => {
   }
 };
 
-const mapStateToProps = state => {
-  return {
-    days: getVisibleDays(state.days, state.visibilityFilter)
-  };
-};
+const mapStateToProps = state => ({
+  days: getVisibleDays(state.days, state.visibilityFilter)
+});
 
-const mapDispatchToProps = dispatch => {
-  return {
-    onTodoClick: id => {
-      dispatch(toggleTodo(id));
-    }
-  };
-};
+const mapDispatchToProps = dispatch => ({
+  onTodoClick: id => {
+    dispatch(toggleTodo(id));
+  }
+});
 
-const VisibleTodoList = connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(DayList);
-
-export default VisibleTodoList;
