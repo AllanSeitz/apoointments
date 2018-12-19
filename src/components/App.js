@@ -11,10 +11,8 @@ import VisibleLocationList from "../containers/VisibleLocationList";
 const App = () => (
   <div className="container">
     <div className="Main">
-      <div className="jumbotron">
-        <h3>Trifin Labs Agenda</h3>
-        <p>Select Date/ Time/ Location</p>
-      </div>
+      <h4>Sort appointments by:</h4>
+      <NavBar />
       <div class="panel panel-primary">
         <div class="panel-heading">
           <h3 class="panel-title">Date</h3>
@@ -57,7 +55,6 @@ const App = () => (
         <VisibleLocationList />
       </li>
     </ul>
-    <NavBar />
   </div>
 );
 

@@ -12,3 +12,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+button {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0 1rem 0;
+  padding: 0.85em 2em;
+  -webkit-appearance: none;
+  border: 1px solid transparent;
+  border-radius: 2rem;
+  color: rgb(255, 255, 255);
+  background-color: #27bae3;
+  transition: all 0.25s ease-out;
+  font-size: 0.9rem;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+h4 {
+  margin: 0;
+}
+input {
+  border: solid 1px #27bae3;
+}
+ul li {
+  list-style: none;
+}
