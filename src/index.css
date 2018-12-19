@@ -33,6 +33,7 @@ h4 {
   margin: 0;
 }
 input {
+  margin-bottom: 1em;
   border: solid 1px #27bae3;
 }
 ul li {
